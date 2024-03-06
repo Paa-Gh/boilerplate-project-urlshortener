@@ -35,7 +35,6 @@ app.post('/api/shorturl', function(req, res) {
   // validate url
   try {
     urlCheck = new URL(url);
-    console.log(urlCheck);
     dns.lookup(urlCheck.hostname, (err, address, family) =>{
       // if domain is invalid
       if(!address){
